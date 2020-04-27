@@ -1,0 +1,8 @@
+
+virtual/
+
+*/__pycache__/*
+*/migrations/*
+.vscode/
+media/
+.env
