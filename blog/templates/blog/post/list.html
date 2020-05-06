@@ -8,7 +8,8 @@
 {% for post  in all_posts %}
 
 <h2>
-   {{post.title}}
+    <a href='{{post.get_absolute_url}}'>{{post.title}}</a>
+   
 </h2>
 <p class="date">
     Published {{post.publish}} by {{post.author}}
