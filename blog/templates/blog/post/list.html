@@ -8,7 +8,7 @@
 {% for post  in all_posts %}
 
 <h2>
-    <a href='{{post.get_absolute_url}}'>{{post.title}}</a>
+    <a href='{{post.get_absolute_url}}'>{{post.title |truncatewords:12}}</a>
    
 </h2>
 <p class="date">
@@ -16,5 +16,5 @@
 </p>
 {{post.body| truncatewords:30| linebreaks}}
 {% endfor %}
-{% include 'pagination.html' with pages=all_posts%}
+{% include 'pagination.html' with pages=page_obj%}
 {% endblock %}
