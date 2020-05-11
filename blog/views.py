@@ -18,6 +18,8 @@ def post_list(request):
    
     return render(request,'blog/post/list.html',{'all_posts':posts})
 
+
+
 class PostItemsView(ListView):
     queryset=Post.published.all()
     context_object_name='all_posts'
